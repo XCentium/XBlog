@@ -1,0 +1,35 @@
+﻿@using XBlogHelper
+@using XBlogHelper.Models.Blog
+@using XBlogHelper.Search
+@using XBlogHelper.General
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+@using Sitecore.Links;
+@inherits System.Web.Mvc.WebViewPage
+
+@{
+    Item dataSourceItem = Sitecore.Context.Database.GetItem(Sitecore.Mvc.Presentation.RenderingContext.Current.Rendering.DataSource);
+    BlogSettings settingsItem = XBlogHelper.General.DataManager.GetBlogSettingsItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+
+    Item blogHome = DataManager.GetBlogHomeItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+    UrlOptions option = new UrlOptions();
+    option.AddAspxExtension = false;
+    string searchUrl = String.Format("{0}/{1}/", LinkManager.GetItemUrl(blogHome, option), XBSettings.XBSearchQS);
+}
+
+<script type="text/javascript">
+    function SubmitFrm() {
+        var Searchtxt = document.getElementById("txtSearch").value;
+        if (Searchtxt != "") {
+            window.location = "@Html.Raw(searchUrl)" + Searchtxt;
+        }
+    }
+</script>
+
+<div id='@Html.Raw(settingsItem.PrimaryCSSID)-TextSearch' >
+    <form>
+        <input name="txtSearch" type="text" id="txtSearch" class="field" />            
+        <input type="submit" name="btnSearch" value="@Html.Raw(settingsItem.SearchButtonValue)" id="btnSearch" class="btn" onclick="SubmitFrm(); return false;" />
+    </form>
+</div>

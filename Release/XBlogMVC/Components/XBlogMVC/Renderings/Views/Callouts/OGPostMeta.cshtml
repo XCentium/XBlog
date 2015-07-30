@@ -1,0 +1,61 @@
+﻿@using XBlogHelper.Models.Blog
+@using XBlogHelper.Search
+@using XBlogHelper
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Data
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@using XBlogHelper.General
+@using System.Text.RegularExpressions
+@inherits System.Web.Mvc.WebViewPage
+
+@{
+    Item dataSourceItem = Sitecore.Context.Database.GetItem(Sitecore.Mvc.Presentation.RenderingContext.Current.Rendering.DataSource);
+    BlogSettings settingsItem = XBlogHelper.General.DataManager.GetBlogSettingsItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+
+    BlogPost blogPost = Sitecore.Context.Item.CreateAs<BlogPost>();
+    
+    UrlOptions options = new UrlOptions();
+    options.AlwaysIncludeServerUrl = true;
+    string ogURL = LinkManager.GetItemUrl(blogPost.InnerItem, options);
+
+    string ogDescription = "";
+    if (!String.IsNullOrEmpty(blogPost.Summary))
+    {
+        ogDescription = Regex.Replace(blogPost.Summary, "<.*?>", String.Empty);
+    }
+    else
+    {
+        ogDescription = Regex.Replace(XBlogHelper.Helpers.Helper.SafeSubstring(blogPost.Summary, settingsItem.DisplaySummaryLength), "<.*?>", String.Empty);
+    }
+
+    string ogAuthorImage = "";
+    if (blogPost.Authors.Any())
+    {
+        List<Sitecore.Data.ID> authorIds = new List<Sitecore.Data.ID>();
+        foreach (Author a in blogPost.Authors)
+        {
+            authorIds.Add(a.ItemId);
+        }
+
+        List<Author> authors = AuthorManager.GetAuthorsForBlogPost(authorIds);
+
+        if (authors[0].ProfileImage != null && authors[0].ProfileImage.MediaItem != null && settingsItem.DisplayAuthorImage)
+        {
+            MediaUrlOptions mediaOptions = new MediaUrlOptions();
+            mediaOptions.AlwaysIncludeServerUrl = true;
+            ogAuthorImage = MediaManager.GetMediaUrl(authors[0].ProfileImage.MediaItem, mediaOptions);
+        }
+                                
+                                
+    }
+
+}
+
+
+<meta property="og:url" content="@Html.Raw(ogURL)" />
+<meta property="og:title" content="@Html.Raw(blogPost.Title)" />
+<meta property="og:description" content="@Html.Raw(ogDescription)" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="@Html.Raw(ogAuthorImage)" />

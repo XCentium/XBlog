@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBlogHelper", "XBlogHelper\XBlogHelper.csproj", "{02A402E6-39D7-4FBF-8709-2E48C7DF7D46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBlogMVC", "XBlogMVC\XBlogMVC.csproj", "{B8BC47A8-E3BB-4C1F-96F1-ACC320E92058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBlogWF", "XBlogWF\XBlogWF.csproj", "{FCFE5354-D640-47F2-948D-DFA95B6C9393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBlogGlobal", "XBlogGlobal\XBlogGlobal.csproj", "{00EF1169-56FA-4855-8F87-B490C5877D5C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.xcentium.net:8080/tfs/xcore
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = XBlogHelper\\XBlogHelper.csproj
+		SccProjectName1 = XBlogHelper
+		SccLocalPath1 = XBlogHelper
+		SccProjectUniqueName2 = XBlogMVC\\XBlogMVC.csproj
+		SccProjectName2 = XBlogMVC
+		SccLocalPath2 = XBlogMVC
+		SccProjectUniqueName3 = XBlogWF\\XBlogWF.csproj
+		SccProjectName3 = XBlogWF
+		SccLocalPath3 = XBlogWF
+		SccProjectUniqueName4 = XBlogGlobal\\XBlogGlobal.csproj
+		SccProjectName4 = XBlogGlobal
+		SccLocalPath4 = XBlogGlobal
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02A402E6-39D7-4FBF-8709-2E48C7DF7D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A402E6-39D7-4FBF-8709-2E48C7DF7D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A402E6-39D7-4FBF-8709-2E48C7DF7D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A402E6-39D7-4FBF-8709-2E48C7DF7D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8BC47A8-E3BB-4C1F-96F1-ACC320E92058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8BC47A8-E3BB-4C1F-96F1-ACC320E92058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8BC47A8-E3BB-4C1F-96F1-ACC320E92058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8BC47A8-E3BB-4C1F-96F1-ACC320E92058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFE5354-D640-47F2-948D-DFA95B6C9393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFE5354-D640-47F2-948D-DFA95B6C9393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFE5354-D640-47F2-948D-DFA95B6C9393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFE5354-D640-47F2-948D-DFA95B6C9393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00EF1169-56FA-4855-8F87-B490C5877D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00EF1169-56FA-4855-8F87-B490C5877D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00EF1169-56FA-4855-8F87-B490C5877D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00EF1169-56FA-4855-8F87-B490C5877D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

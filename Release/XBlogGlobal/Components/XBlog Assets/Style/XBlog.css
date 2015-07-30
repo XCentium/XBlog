@@ -1,0 +1,245 @@
+﻿
+/*General Styles - replace with your own main styling*/
+a, a:hover, a:focus {
+color: #689caa;
+text-decoration: underline;
+background: transparent;
+}
+
+a:visited {
+    color: #689caa;
+}
+
+p {
+    
+color: #4e5c5b;
+margin: .5px;
+
+}
+
+.clear {clear: both;}
+
+.XBlogMain
+{
+    margin-left: 20px;
+    width: 700px;
+    float: left;
+}
+.XBlogRight
+{   margin-right: 20px;
+    width: 200px;
+    float: left;
+}
+
+
+/*Blog List and Blog Post*/
+#XB {
+    background: #f5f6f6;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80%;
+}
+
+#XB h1, .h1 {
+color: #8cc542;
+font-size: 3em;
+font-weight: 300;
+margin:1px;
+}
+
+#XB h2, .h2 {
+color: #4e5c5b;
+font-size: 1.75em;
+font-weight: 200;
+margin:1px;
+}
+
+#XB h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}
+
+#XB .set {
+overflow: hidden;
+white-space: nowrap;
+display:inline;
+color: #4e5c5b;
+font-weight: 100;
+}
+
+#XB .authorheading img {
+    margin: 0px 10px 10px 0px;
+    float: left;
+}
+
+#XB .readmore {
+    float: right;
+}
+
+
+#XB .container-wrapper {
+background: #f5f6f6;
+padding: 1.25em 0 2em;
+position: relative;
+}
+
+#XB .container-fluid {
+
+padding-left: 15px;
+padding-right: 15px;
+
+}
+
+#XB .halfLeft {
+    float: left;
+    width: 50%;
+}
+
+#XB .halfRight {
+    float: left;
+    width: 50%;
+}
+
+/* Category List */
+#XB-CategoryList {
+    margin-top: 10px;
+}
+#XB-CategoryList h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}
+
+/* Author View */
+#XB .authorImage
+{
+    float: left;
+    margin: 0px 15px 15px 0px;
+}
+
+
+#XB .authorcol
+{
+    display: inline-block;
+    width: 32%;
+    padding-bottom: 10px;
+}
+
+#XB .authorcol div
+{
+    vertical-align: bottom;
+}
+
+
+/* Author List */
+#XB-AuthorList {
+    margin-top: 10px;
+}
+#XB-AuthorList h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}
+
+#XB-AuthorList .authorviewlink
+{
+    margin-top: 10px;
+    float: right;
+}
+
+#XB-AuthorList .authorlistlink
+{
+    margin-top: 7px;
+    float: left;
+}
+
+#XB-AuthorList .authorlistimage
+{
+    float: left;
+    margin-right: 5px;
+}
+
+
+/* Tag List */
+#XB-TagList {
+    margin-top: 10px;
+}
+#XB-TagList h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}
+
+/* Tag Cloud */
+#XB-TagCloud {
+    margin-top: 10px;
+}
+#XB-TagCloud h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}
+#XB-TagCloud A.weight1
+{
+    font-size: 1.9em;
+    font-weight:bolder;
+}
+#XB-TagCloud A.weight2
+{
+    font-size:1.5em;
+    font-weight:bolder;
+}
+#XB-TagCloud A.weight3
+{
+    font-size: 1.4em;
+    font-weight:bolder;
+}
+#XB-TagCloud A.weight4
+{
+    font-size: 1.2em;
+}
+#XB-TagCloud A.weight5
+{
+    font-size: 1.0em;
+}
+
+/* Recent Blog */
+#XB-RecentBlog {
+    margin-top: 10px;
+}
+#XB-RecentBlog h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}
+
+
+/* Related Blog */
+#XB-RelatedBlog {
+    margin-top: 10px;
+}
+#XB-RelatedBlog h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}
+
+
+/* Text Search */
+#XB-TextSearch {
+    margin-top: 10px;
+}
+#XB-TextSearch h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}

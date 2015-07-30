@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02A402E6-39D7-4FBF-8709-2E48C7DF7D46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XBlogHelper</RootNamespace>
+    <AssemblyName>XBlogHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\References\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Buckets">
+      <HintPath>..\References\Sitecore.Buckets.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Buckets.Client">
+      <HintPath>..\References\Sitecore.Buckets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch">
+      <HintPath>..\References\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq">
+      <HintPath>..\References\Sitecore.ContentSearch.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\References\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Speak.Client">
+      <HintPath>..\References\Sitecore.Speak.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseSublayout.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buckets\BucketFolderConfigurationManager.cs" />
+    <Compile Include="Buckets\EventHandlers\ItemSaved.cs" />
+    <Compile Include="Buckets\PublishDateBasedFolderPath.cs" />
+    <Compile Include="ContentSearch\ComputedFields\ParsedXBlogAuthorName.cs" />
+    <Compile Include="ContentSearch\ComputedFields\ParsedXBlogCategoryName.cs" />
+    <Compile Include="ContentSearch\ComputedFields\ParsedXBlogTagName.cs" />
+    <Compile Include="Controllers\ImportController.cs" />
+    <Compile Include="Controllers\XBlogController.cs" />
+    <Compile Include="Fields\XBlogMultilist.cs" />
+    <Compile Include="General\DataManager.cs" />
+    <Compile Include="General\XBSettings.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Import\ImportManager.cs" />
+    <Compile Include="Import\BlogCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ItemExtensions.cs" />
+    <Compile Include="ItemMapper\Configuration\Attributes\SitecoreItemAttribute.cs" />
+    <Compile Include="ItemMapper\Configuration\Attributes\SitecoreItemFieldAttribute.cs" />
+    <Compile Include="ItemMapper\Configuration\Attributes\SitecoreItemPropertyAttribute.cs" />
+    <Compile Include="ItemMapper\Configuration\Attributes\SitecoreItemTemplateAttribute.cs" />
+    <Compile Include="ItemMapper\DataHandler.cs" />
+    <Compile Include="ItemMapper\DynamicProxy\ClassInterceptor.cs" />
+    <Compile Include="ItemMapper\SitecoreItem.cs" />
+    <Compile Include="ItemMapper\TypeMapper.cs" />
+    <Compile Include="Models\Blog\Author.cs" />
+    <Compile Include="Models\Blog\BlogPost.cs" />
+    <Compile Include="Models\Blog\BlogHome.cs" />
+    <Compile Include="Models\Blog\BlogSettings.cs" />
+    <Compile Include="Models\Blog\Category.cs" />
+    <Compile Include="Models\Blog\AuthorView.cs" />
+    <Compile Include="Models\Blog\Tag.cs" />
+    <Compile Include="Models\Blog\XBlogAuthors.cs" />
+    <Compile Include="Models\Blog\XBlogCategories.cs" />
+    <Compile Include="Models\Blog\XBlogData.cs" />
+    <Compile Include="Models\Blog\XBlogTags.cs" />
+    <Compile Include="Models\Import\ProjectType.cs" />
+    <Compile Include="Models\Import\WPAuthor.cs" />
+    <Compile Include="Models\Import\WPCategory.cs" />
+    <Compile Include="Models\Import\WPComment.cs" />
+    <Compile Include="Models\Import\WPPost.cs" />
+    <Compile Include="Models\Import\WPTag.cs" />
+    <Compile Include="Pipelines\BlogItemResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\AuthorManager.cs" />
+    <Compile Include="Search\BlogManager.cs" />
+    <Compile Include="Search\CategoryManager.cs" />
+    <Compile Include="Search\TagManager.cs" />
+    <Compile Include="Search\XBlogDataManager.cs" />
+    <Compile Include="SublayoutParameterHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

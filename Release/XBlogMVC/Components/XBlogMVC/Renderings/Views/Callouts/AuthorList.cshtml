@@ -1,0 +1,56 @@
+﻿@using XBlogHelper.Models.Blog
+@using XBlogHelper.Search
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+@inherits System.Web.Mvc.WebViewPage
+
+@{
+    Item dataSourceItem = Sitecore.Context.Database.GetItem(Sitecore.Mvc.Presentation.RenderingContext.Current.Rendering.DataSource);
+    BlogSettings settingsItem = XBlogHelper.General.DataManager.GetBlogSettingsItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+    Dictionary<string, int> authorCount = AuthorManager.GetAuthorCount(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+}
+
+<div id='@Html.Raw(settingsItem.PrimaryCSSID)-AuthorList' >
+    <h3>@Html.Sitecore().Field(BlogSettings.AuthorListTitleFieldId, settingsItem.InnerItem)</h3>
+    @{
+        //Get search results
+        IEnumerable<Author> authors = null;
+        if (settingsItem.OrderAuthorOnCount)
+        {
+
+            authors = AuthorManager.GetAuthorsOrderedByCount(authorCount);
+        }
+        else
+        {
+            authors = AuthorManager.GetAuthors(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+        }
+        
+        // Set max display
+        authors = AuthorManager.SetAuthorDisplayLimit(settingsItem.AuthorListMaxAuthorsToDisplay, authors);
+        
+        if (authors == null || !authors.Any())
+        {
+            return;
+        }
+    }
+    <div>
+    @foreach (Author author in authors) 
+    {
+        string itemID = author.ItemId.ToString();
+        string countDisplay = "";
+        if (authorCount.ContainsKey(itemID) && settingsItem.DisplayCountOnAuthorList)
+        {
+            countDisplay = String.Format(" ({0})", authorCount[itemID].ToString());
+        }
+
+        if (author.ProfileImage != null && author.ProfileImage.MediaItem != null && settingsItem.AuthorListDisplayImage)
+        {
+            <div class="authorlistimage">@Html.Raw(String.Format("<img src=\"{0}?mw={1}\" border=\"0\" />", MediaManager.GetMediaUrl(author.ProfileImage.MediaItem), settingsItem.AuthorListImageMaxWidth))</div>
+        }
+        
+        <div class="authorlistlink"><a href="@Html.Raw(AuthorManager.GetAuthorUrl(author.FullName, dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item))">@Html.Raw(author.FullName + countDisplay)</a></div>
+        <br class="clear" />
+    }
+    </div>
+</div>

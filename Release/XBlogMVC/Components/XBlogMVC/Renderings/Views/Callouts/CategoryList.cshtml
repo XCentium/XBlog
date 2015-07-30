@@ -1,0 +1,54 @@
+﻿@using XBlogHelper.Models.Blog;
+@using XBlogHelper.Search;
+@using XBlogHelper;
+@using Sitecore.Data.Items;
+@using Sitecore.Mvc;
+@using Sitecore.Data;
+@using XBlogHelper.General;
+@inherits System.Web.Mvc.WebViewPage
+
+@{
+    Item dataSourceItem = Sitecore.Context.Database.GetItem(Sitecore.Mvc.Presentation.RenderingContext.Current.Rendering.DataSource);
+    BlogSettings settingsItem = XBlogHelper.General.DataManager.GetBlogSettingsItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+    Dictionary<string, int> categoryCount = CategoryManager.GetCategoryCount(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+
+    Database masterDB = Sitecore.Context.ContentDatabase ?? Sitecore.Configuration.Factory.GetDatabase("master");
+
+}
+
+
+<div id='@Html.Raw(settingsItem.PrimaryCSSID)-CategoryList' >
+    <h3>@Html.Sitecore().Field(BlogSettings.CategoryListTitleFieldId, settingsItem.InnerItem)</h3>
+    @{
+        //Get search results
+        IEnumerable<Category> categories = null;
+        if (settingsItem.OrderCategoryOnCount) 
+        {
+
+            categories = CategoryManager.GetCategoriesOrderedByCount(categoryCount);
+        }
+        else 
+        {
+            categories = CategoryManager.GetCategories(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+        }
+
+        if (categories == null || !categories.Any())
+        {
+            return;
+        }
+    }
+    <div>
+        @foreach (Category category in categories) 
+        {
+            string itemID = category.ItemId.ToString();
+            string countDisplay = "";
+            if (categoryCount.ContainsKey(itemID) && settingsItem.DisplayCountOnCategoryList)
+            {
+                countDisplay = String.Format(" ({0})", categoryCount[itemID].ToString());
+            }
+            <a href="@Html.Raw(CategoryManager.GetCategoryUrl(category.CategoryName, dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item))">@Html.Raw(category.CategoryName + countDisplay)</a>     
+            <br />
+        }
+    </div>
+ 
+</div>

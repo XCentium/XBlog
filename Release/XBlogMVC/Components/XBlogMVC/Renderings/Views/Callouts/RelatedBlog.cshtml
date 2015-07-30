@@ -1,0 +1,70 @@
+﻿@using XBlogHelper.Models.Blog
+@using XBlogHelper.Search
+@using XBlogHelper.General;
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+@using Sitecore.Links
+@using XBlogHelper;
+@inherits System.Web.Mvc.WebViewPage
+
+@{
+    Item dataSourceItem = Sitecore.Context.Database.GetItem(Sitecore.Mvc.Presentation.RenderingContext.Current.Rendering.DataSource);
+    BlogSettings settingsItem = XBlogHelper.General.DataManager.GetBlogSettingsItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+    BlogPost currentBlogPost = Sitecore.Context.Item.CreateAs<BlogPost>();
+}
+
+@if (currentBlogPost != null)
+{
+    <div id='@Html.Raw(settingsItem.PrimaryCSSID)-RelatedBlog' >
+        <h3>@Html.Sitecore().Field(BlogSettings.RelatedBlogTitleFieldId, settingsItem.InnerItem)</h3>
+        @{
+            //Get search results
+            IEnumerable<BlogPost> blogs = BlogManager.GetBlogRelatedValues(currentBlogPost);
+            blogs = BlogManager.SetBlogDisplayLimit(settingsItem.RelatedBlogMaxPosts, blogs);
+
+            if (blogs == null || !blogs.Any())
+            {
+                return;
+            }
+        }
+        <div>
+        @foreach (BlogPost blogPost in blogs)
+        {
+            <div itemprop="headline">
+                <a href="@Html.Raw(LinkManager.GetItemUrl(blogPost.InnerItem))">@Html.Raw(blogPost.Title)</a>
+            </div>
+            <div class="set authorheading" itemprop="author">
+                By
+                @{
+                    if (blogPost.Authors.Any())
+                    {
+                        List<Sitecore.Data.ID> authorIds = new List<Sitecore.Data.ID>();
+                        foreach (Author a in blogPost.Authors)
+                        {
+                            authorIds.Add(a.ItemId);
+                        }
+
+                        List<Author> authors = AuthorManager.GetAuthorsForBlogPost(authorIds);
+
+                        string authorNames = string.Empty;
+
+                        foreach (Author a in authors)
+                        {
+                            authorNames += a.FullName;
+                        }
+
+                        @Html.Raw(authors[0].FullName);
+                                
+                                
+                    }
+                }
+                On
+                @Html.Raw(blogPost.PublishDate.DateTime.ToString(settingsItem.BlogListingDateFormat))
+                            
+            </div>
+
+        }
+        </div>
+    </div>
+}

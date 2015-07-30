@@ -1,0 +1,70 @@
+﻿@using System.Configuration
+@using System.Web.Configuration
+@using Sitecore
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Web.UI.Controls.Common.UserControls
+@model RenderingModel
+@{
+    var userControl = this.Html.Sitecore().Controls().GetUserControl(this.Model.Rendering);
+    //var destination = userControl.GetString("DestinationUrl", "destinationUrl");
+
+    userControl.Requires.Script("client", "UploadFiles.js");
+    userControl.Class = "sc-uploader row-fluid";
+
+    var parametersResolver = new DatasourceBasedParametersResolver(this.Model.Rendering);
+    var mediaFolderPath = StringUtil.GetString(parametersResolver.GetString("MediaFolderPath", ""), "/sitecore/media library/Uploaded Files");
+    userControl.SetAttribute("data-sc-mediaFolderPath", mediaFolderPath);
+    var url = StringUtil.GetString(parametersResolver.GetString("Url", ""), "/api/sitecore/UploadFiles/Upload");
+    userControl.SetAttribute("data-sc-apiurl", url);
+    var database = parametersResolver.GetString("Database", "");
+    if (!string.IsNullOrEmpty(database))
+    {
+        if (string.Compare(database, "$context_database", StringComparison.InvariantCultureIgnoreCase) == 0)
+        {
+            database = Sitecore.Context.Database.Name;
+        }
+        else if (string.Compare(database, "$context_contentdatabase", StringComparison.InvariantCultureIgnoreCase) == 0)
+        {
+            database = Sitecore.Context.ContentDatabase.Name;
+        }
+        userControl.SetAttribute("data-sc-databasename", database);
+
+        var maxRequestLength = 0;
+        var section = ConfigurationManager.GetSection("system.web/httpRuntime") as HttpRuntimeSection;
+
+        if (section != null)
+        {
+            userControl.SetAttribute("data-sc-maxrequestlength", section.MaxRequestLength * 1024);
+            userControl.SetAttribute("data-sc-executiontimeout", section.ExecutionTimeout.TotalSeconds.ToString());
+        }
+    }
+    //  userControl.SetAttribute("data-sc-destinationUrl", destination);
+
+    var controlId = userControl.ControlId;
+    var htmlAttributes = userControl.HtmlAttributes;
+}
+<form @htmlAttributes method="POST" enctype="multipart/form-data">
+    <img class="sc-uploader-preview hide" />
+    <div class="sc-uploader-content">
+        <span class="drag">
+            @Sitecore.ClientHost.Globalization.Translate("Drag and drop files here")
+            <br />
+            @Sitecore.ClientHost.Globalization.Translate("or")
+            <br />
+        </span>
+        <span class="btn sc-button">
+            @Sitecore.ClientHost.Globalization.Translate("Upload Files")
+            <input class="sc-uploader-fileupload" type="file" name="files[]" multiple>
+        </span>
+
+        <div class="sc-uploader-general-info">
+            <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                <div class="bar" data-bind="style: { width: globalPercentage() + '%' }"></div>
+            </div>
+            <p>
+                <span data-bind="text: totalSize"></span>&nbsp;|&nbsp;<span data-bind="    text: totalFiles"></span>&nbsp;files
+            </p>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,48 @@
+﻿@using XBlogHelper.Models.Blog;
+@using XBlogHelper.Search;
+@using Sitecore.Data.Items;
+@using Sitecore.Mvc;
+@inherits System.Web.Mvc.WebViewPage
+
+@{
+    Item dataSourceItem = Sitecore.Context.Database.GetItem(Sitecore.Mvc.Presentation.RenderingContext.Current.Rendering.DataSource);
+    BlogSettings settingsItem = XBlogHelper.General.DataManager.GetBlogSettingsItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+    Dictionary<string, int> tagCount = TagManager.GetTagCloud(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+}
+
+
+<div id='@Html.Raw(settingsItem.PrimaryCSSID)-TagList' >
+    <h3>@Html.Sitecore().Field(BlogSettings.TagListTitleFieldId, settingsItem.InnerItem)</h3>
+    @{
+        //Get search results
+        IEnumerable<Tag> tags = null;
+        if (settingsItem.OrderTagOnCount)
+        {
+
+            tags = TagManager.GetTagsOrderedByCount(tagCount);
+        }
+        else
+        {
+            tags = TagManager.GetTags(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+        }
+
+        if (tags == null || !tags.Any())
+        {
+            return;
+        }
+    }
+
+    @foreach (Tag tag in tags) 
+    {
+        
+        string itemID = tag.ItemId.ToString();
+        string countDisplay = "";
+        if (tagCount.ContainsKey(itemID) && settingsItem.DisplayCountOnTagList)
+        {
+            countDisplay = String.Format(" ({0})", tagCount[itemID].ToString());
+        }
+        <a href="@Html.Raw(TagManager.GetTagUrl(tag.TagName, dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item))">@Html.Raw(tag.TagName + countDisplay)</a>
+        <br />
+    }
+ 
+</div>
