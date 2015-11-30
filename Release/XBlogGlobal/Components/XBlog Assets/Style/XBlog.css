@@ -243,3 +243,14 @@ font-size: 1.25em;
 font-weight: 100;
 margin:.5px;
 }
+
+/* Comment List */
+#XB-CommentList {
+    margin-top: 10px;
+}
+#XB-CommentList h3, .h3 {
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}

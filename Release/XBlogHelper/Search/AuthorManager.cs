@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XBlogHelper.General;
 using XBlogHelper.Models.Blog;
+using XBlogHelper.Models.Blog.Shorts;
 using XBlogHelper;
 using XBlogHelper.ItemMapper;
 
@@ -134,13 +135,15 @@ namespace XBlogHelper.Search
                     Expression<Func<SearchResultItem, bool>> predicate = PredicateBuilder.True<SearchResultItem>();
                     predicate = predicate.And(item => item.TemplateName == BlogPost.BlogPostTemplate && item.Paths.Contains(repositorySearchItem.ID));
 
-                    IEnumerable<BlogPost> resultList = context.GetQueryable<SearchResultItem>().Where(predicate).OrderBy(t => t.Name).CreateAs<BlogPost>();
+                    IEnumerable<BlogPostAuthorString> resultList = context.GetQueryable<SearchResultItem>().Where(predicate).OrderBy(t => t.Name).CreateAs<BlogPostAuthorString>();
 
-                    foreach (BlogPost item in resultList)
+                    foreach (BlogPostAuthorString item in resultList)
                     {
-                        foreach (Author author in item.Authors)
+                        char[] delimiterChars = { '|' };
+                        string[] itemIDs = item.AuthorString.Split(delimiterChars);
+
+                        foreach (string itemID in itemIDs)
                         {
-                            string itemID = author.ItemId.ToString();
                             if (authorItems.ContainsKey(itemID))
                                 authorItems[itemID] += 1;
                             else

@@ -26,6 +26,8 @@ namespace XBlogHelper.Models.Blog {
         
         public const string CategoryFolderFieldId = "{8C33AB62-E715-4369-A220-9CC0A241B41C}";
 
+        public const string CommentsFolderFieldId = "{60004F43-1AEC-485B-A3E2-60F3C2742802}";
+
         public const string PrimaryCSSIDFieldId = "{4089F518-E690-4306-892E-FE9C4A66B018}";
 
         public const string CategoryListTitleFieldId = "{25ECBF1B-12C9-414C-8BFC-1BAD66AB8B5D}";
@@ -124,6 +126,14 @@ namespace XBlogHelper.Models.Blog {
 
         public const string IncludeEmailOnBlogPostFieldId = "{535AF7AA-06A7-4401-A9C2-94125B674056}";
 
+        public const string CommentsTitleFieldId = "{0F5B42A4-D662-494C-86F3-D985DB48F0ED}";
+
+        public const string CommentsRequireNameFieldId = "{AE54211A-E62E-470C-84D1-0752F5C501F4}";
+
+        public const string CommentsRequireEmailFieldId = "{5F56CD35-8925-43EE-999E-4C3B95E7067C}";
+
+        public const string CommentsPerPageFieldId = "{D9DD2645-40EC-4271-96D4-C4B20C30B01A}";
+
 
         #endregion
         
@@ -138,7 +148,10 @@ namespace XBlogHelper.Models.Blog {
          public virtual Item CategoryFolder { get; set; }
 
         [SitecoreItemField(AuthorViewPageFieldId)]
-        public virtual Item AuthorViewPage { get; set; } 
+        public virtual Item AuthorViewPage { get; set; }
+
+        [SitecoreItemField(CommentsFolderFieldId)]
+        public virtual Item CommentsFolder { get; set; } 
 
         [SitecoreItemField(PrimaryCSSIDFieldId)]
         public virtual string PrimaryCSSID { get; set; }
@@ -286,6 +299,18 @@ namespace XBlogHelper.Models.Blog {
 
         [SitecoreItemField(IncludeTwitterOnBlogPostFieldId)]
         public virtual bool IncludeTwitterOnBlogPost { get; set; }
+
+        [SitecoreItemField(CommentsTitleFieldId)]
+        public virtual string CommentsTitle { get; set; }
+
+        [SitecoreItemField(CommentsRequireEmailFieldId)]
+        public virtual bool CommentsRequireEmail { get; set; }
+
+        [SitecoreItemField(CommentsRequireNameFieldId)]
+        public virtual bool CommentsRequireName { get; set; }
+
+        [SitecoreItemField(CommentsPerPageFieldId)]
+        public virtual string CommentsPerPage { get; set; }
 
         #endregion
         

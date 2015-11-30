@@ -77,6 +77,7 @@
     <Content Include="Components\XBlog Assets\Icons\RRSSB\tumblr.svg" />
     <Content Include="Components\XBlog Assets\Icons\RRSSB\twitter.svg" />
     <Content Include="Components\XBlog Assets\Icons\RRSSB\youtube.svg" />
+    <Content Include="Components\XBlog Assets\Images\XBlog.jpg" />
     <Content Include="Components\XBlog Assets\JS\RRSSB\rrssb.js" />
     <Content Include="Components\XBlog Assets\JS\RRSSB\rrssb.min.js" />
     <Content Include="Components\XBlog Assets\JS\RRSSB\vendor\jquery.1.10.2.min.js" />
@@ -86,7 +87,9 @@
     <Content Include="Components\XBlog Assets\Style\RRSSB\rrssb.css" />
     <Content Include="Components\XBlog Assets\Style\XBlog.css" />
     <Content Include="Sitecore Modules\XBlog\SPEAK\XBlogCreator.js" />
+    <Content Include="sitecore\shell\client\Speak\Assets\lib\ui\deps\jquery-File-Upload\jquery.fileupload.js" />
     <Content Include="sitecore\shell\client\YourApps\Blog Creator\Blog Creator.js" />
+    <Content Include="sitecore\shell\client\YourApps\Blog Creator\XBlogCreator.css" />
     <Content Include="sitecore\shell\client\YourApps\XCore Tools\Renderings\Forms\UploadFiles.js" />
     <Content Include="sitecore\shell\client\YourApps\XCore Tools\Renderings\Forms\UploadFiles.test.js" />
   </ItemGroup>
@@ -98,6 +101,8 @@
     <Content Include="App_Config\Include\XBlog.Settings.config" />
     <Content Include="App_Config\Include\XBlog.Sitecore.Buckets.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\Sitecore8.pubxml" />
+    <Content Include="sitecore\shell\client\Speak\Assets\lib\ui\deps\jquery-File-Upload\jquery.iframe-transport.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

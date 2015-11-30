@@ -132,6 +132,14 @@ namespace XBlogHelper.General
             }
         }
 
+        public static string XBCommentSubmissionDate
+        {
+            get
+            {
+                return Settings.GetSetting("XBCommentSubmissionDate", "submission_date");
+            }
+        }
+
         /// <summary>
         /// Tag Cloud Range
         /// Percent as number, number is equal to or greater than

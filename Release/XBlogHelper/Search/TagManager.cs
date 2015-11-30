@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XBlogHelper.General;
 using XBlogHelper.Models.Blog;
+using XBlogHelper.Models.Blog.Shorts;
 using XBlogHelper;
 using XBlogHelper.ItemMapper;
 
@@ -110,14 +111,18 @@ namespace XBlogHelper.Search
                     Expression<Func<SearchResultItem, bool>> predicate = PredicateBuilder.True<SearchResultItem>();
                     predicate = predicate.And(item => item.TemplateName == BlogPost.BlogPostTemplate && item.Paths.Contains(repositorySearchItem.ID));
 
-                    IEnumerable<BlogPost> resultList = context.GetQueryable<SearchResultItem>().Where(predicate).OrderBy(t => t.Name).CreateAs<BlogPost>();
+                    IEnumerable<BlogPostTagString> resultList = context.GetQueryable<SearchResultItem>().Where(predicate).OrderBy(t => t.Name).CreateAs<BlogPostTagString>();
+
+                    List<ID> listIDs = context.GetQueryable<SearchResultItem>().Where(predicate).Select(result => result.ItemId).ToList();
 
                     tagItems.Add("max", 0);
-                    foreach (BlogPost item in resultList)
+                    foreach (BlogPostTagString item in resultList)
                     {
-                        foreach (Tag tag in item.Tags)
+                        char[] delimiterChars = { '|' };
+                        string[] itemIDs = item.TagString.Split(delimiterChars);
+
+                        foreach(string itemID in itemIDs)
                         {
-                            string itemID = tag.ItemId.ToString();
                             if (tagItems.ContainsKey(itemID))
                                 tagItems[itemID] += 1;
                             else

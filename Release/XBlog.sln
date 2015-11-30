@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBlogHelper", "XBlogHelper\XBlogHelper.csproj", "{02A402E6-39D7-4FBF-8709-2E48C7DF7D46}"
 EndProject
@@ -17,18 +17,18 @@ Global
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://tfs.xcentium.net:8080/tfs/xcore
 		SccLocalPath0 = .
-		SccProjectUniqueName1 = XBlogHelper\\XBlogHelper.csproj
-		SccProjectName1 = XBlogHelper
-		SccLocalPath1 = XBlogHelper
-		SccProjectUniqueName2 = XBlogMVC\\XBlogMVC.csproj
-		SccProjectName2 = XBlogMVC
-		SccLocalPath2 = XBlogMVC
-		SccProjectUniqueName3 = XBlogWF\\XBlogWF.csproj
-		SccProjectName3 = XBlogWF
-		SccLocalPath3 = XBlogWF
-		SccProjectUniqueName4 = XBlogGlobal\\XBlogGlobal.csproj
-		SccProjectName4 = XBlogGlobal
-		SccLocalPath4 = XBlogGlobal
+		SccProjectUniqueName1 = XBlogGlobal\\XBlogGlobal.csproj
+		SccProjectName1 = XBlogGlobal
+		SccLocalPath1 = XBlogGlobal
+		SccProjectUniqueName2 = XBlogHelper\\XBlogHelper.csproj
+		SccProjectName2 = XBlogHelper
+		SccLocalPath2 = XBlogHelper
+		SccProjectUniqueName3 = XBlogMVC\\XBlogMVC.csproj
+		SccProjectName3 = XBlogMVC
+		SccLocalPath3 = XBlogMVC
+		SccProjectUniqueName4 = XBlogWF\\XBlogWF.csproj
+		SccProjectName4 = XBlogWF
+		SccLocalPath4 = XBlogWF
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

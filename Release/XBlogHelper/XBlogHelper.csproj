@@ -107,9 +107,13 @@
     <Compile Include="Models\Blog\BlogSettings.cs" />
     <Compile Include="Models\Blog\Category.cs" />
     <Compile Include="Models\Blog\AuthorView.cs" />
+    <Compile Include="Models\Blog\Shorts\BlogPostAuthorString.cs" />
+    <Compile Include="Models\Blog\Shorts\BlogPostCategoryString.cs" />
+    <Compile Include="Models\Blog\Shorts\BlogPostTagString.cs" />
     <Compile Include="Models\Blog\Tag.cs" />
     <Compile Include="Models\Blog\XBlogAuthors.cs" />
     <Compile Include="Models\Blog\XBlogCategories.cs" />
+    <Compile Include="Models\Blog\XBlogComments.cs" />
     <Compile Include="Models\Blog\XBlogData.cs" />
     <Compile Include="Models\Blog\XBlogTags.cs" />
     <Compile Include="Models\Import\ProjectType.cs" />
