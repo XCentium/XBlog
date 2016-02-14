@@ -21,19 +21,21 @@ namespace XBlogHelper.Controllers
             SitecoreViewModelResult result = new SitecoreViewModelResult();
             try
             {
-                foreach (string file in Request.Files)
-                {
-                    HttpPostedFileBase hpf = Request.Files[file] as HttpPostedFileBase;
+                if (Sitecore.Context.User.IsAdministrator) { 
+                    foreach (string file in Request.Files)
+                    {
+                        HttpPostedFileBase hpf = Request.Files[file] as HttpPostedFileBase;
 
-                    if (hpf.ContentLength == 0 || !ValidateFile(hpf, result))
-                        continue;
-                    string fileName = Path.GetFileName(hpf.FileName);
+                        if (hpf.ContentLength == 0 || !ValidateFile(hpf, result))
+                            continue;
+                        string fileName = Path.GetFileName(hpf.FileName);
 
-                    result.Data = fileName;
+                        result.Data = fileName;
                     
-                    string path = StringUtil.EnsurePostfix('/', Sitecore.Configuration.Settings.DataFolder.ToString()) + fileName;
-                    hpf.SaveAs(path);
+                        string path = StringUtil.EnsurePostfix('/', Sitecore.Configuration.Settings.DataFolder.ToString()) + fileName;
+                        hpf.SaveAs(path);
 
+                    }
                 }
             }
             catch (Exception ex)

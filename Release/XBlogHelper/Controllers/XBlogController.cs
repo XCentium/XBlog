@@ -26,17 +26,25 @@ namespace XBlogHelper.Controllers
         {
             try
             {
-                xBlogData = xBlogData.Replace("[","").Replace("]","");
+                if (Sitecore.Context.User.IsAdministrator) { 
+                    xBlogData = xBlogData.Replace("[","").Replace("]","");
 
-                if (string.IsNullOrEmpty(xBlogData))
-                    return Json(String.Format(""));
+                    if (string.IsNullOrEmpty(xBlogData))
+                        return Json(String.Format(""));
 
-                JavaScriptSerializer serializer = new JavaScriptSerializer();
-                XBCreator x = serializer.Deserialize<XBCreator>(xBlogData);
+                    JavaScriptSerializer serializer = new JavaScriptSerializer();
+                    XBCreator x = serializer.Deserialize<XBCreator>(xBlogData);
 
-                BlogCreator.CreateBlog(x.blogName, x.blogType, x.uploadFile, x.blogParent);
+                    BlogCreator.CreateBlog(x.blogName, x.blogType, x.uploadFile, x.blogParent);
 
-                return Json(String.Format("success"));
+                    return Json(String.Format("success"));
+                }
+                else
+                {
+                    string message = "XBlog Error - A non administrator attempted to create a blog";
+                    Log.Error(message, this);
+                    return Json(message);
+                }
             }
             catch (Exception ex)
             {
