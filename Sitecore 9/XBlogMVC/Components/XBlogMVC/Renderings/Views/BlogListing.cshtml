@@ -1,0 +1,208 @@
+﻿@using Sitecore.Feature.XBlog.Models.Blog
+@using Sitecore.Feature.XBlog.Search
+@using Sitecore.Feature.XBlog.General
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@inherits System.Web.Mvc.WebViewPage
+
+
+@{
+    
+    Item dataSourceItem = Sitecore.Context.Database.GetItem(Sitecore.Mvc.Presentation.RenderingContext.Current.Rendering.DataSource);
+    BlogSettings settingsItem = Sitecore.Feature.XBlog.General.DataManager.GetBlogSettingsItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item);
+    string searchHeading = "";
+    string categoryID = "";
+    string authorID = "";
+    string tagID = "";
+    string searchText = "";
+
+    string urlCategoryName = DataManager.GetUrlValByPattern(Request.Url.PathAndQuery, XBSettings.XBCategoryUrlPattern);
+    if (!String.IsNullOrEmpty(urlCategoryName))
+    {
+        Category categoryItem = CategoryManager.GetCategoryByName(Sitecore.Context.Item, urlCategoryName);
+        if (categoryItem != null)
+        {
+            categoryID = categoryItem.InnerItem.ID.ToString();
+
+            if (settingsItem.DisplayFilterMessage)
+            {
+                searchHeading = settingsItem.CategoryFilterTitle + categoryItem.CategoryName;
+            }
+        }
+    }
+
+    string urlAuthorName = DataManager.GetUrlValByPattern(Request.Url.PathAndQuery, XBSettings.XBAuthorUrlPattern);
+    if (!String.IsNullOrEmpty(urlAuthorName))
+    {
+        Author authorItem = AuthorManager.GetAuthorByName(Sitecore.Context.Item, urlAuthorName);
+        if (authorItem != null)
+        {
+            authorID = authorItem.InnerItem.ID.ToString();
+
+            if (settingsItem.DisplayFilterMessage)
+            {
+                searchHeading = settingsItem.AuthorFilterTitle + authorItem.FullName;
+            }
+        }
+    }
+
+    string urlTagName = DataManager.GetUrlValByPattern(Request.Url.PathAndQuery, XBSettings.XBTagsUrlPattern);
+    if (!String.IsNullOrEmpty(urlTagName))
+    {
+        Tag tagItem = TagManager.GetTagByName(Sitecore.Context.Item, urlTagName);
+        if (tagItem != null)
+        {
+            tagID = tagItem.InnerItem.ID.ToString();
+
+            if (settingsItem.DisplayFilterMessage)
+            {
+                searchHeading = settingsItem.TagFilterTitle + tagItem.TagName;
+            }
+        }
+    }
+
+
+    string urlSearchName = DataManager.GetUrlValByPattern(Request.Url.PathAndQuery, XBSettings.XBSearchURLPattern);
+    if (!String.IsNullOrEmpty(urlSearchName))
+    {
+        if (!String.IsNullOrEmpty(urlSearchName))
+        {
+            searchText = urlSearchName;
+
+            if (settingsItem.DisplayFilterMessage)
+            {
+                searchHeading = settingsItem.SearchFilterTitle + searchText;
+            }
+        }
+    }
+    
+    
+    //Get search results
+    int currentPage = 1;
+    int maximumRows = 5;
+    int startRowIndex = 1;
+    bool rowResult = Int32.TryParse(settingsItem.PageSize, out maximumRows);
+    if (!rowResult)
+    {
+        maximumRows = 5;   
+    }
+
+    bool pageResult = false;
+        
+    if (!String.IsNullOrEmpty(Request.QueryString[XBSettings.XBPageQS]))
+    {
+        pageResult = Int32.TryParse(Request.QueryString[XBSettings.XBPageQS], out currentPage);
+    }
+    if (!pageResult)
+    {
+        currentPage = 1;   
+    }
+
+    startRowIndex = (currentPage - 1) * maximumRows;
+        
+        
+    IEnumerable<BlogPost> blogs = BlogManager.GetBlogPosts(Sitecore.Context.Item, categoryID, authorID, tagID, searchText, startRowIndex, maximumRows);
+    int totalRows = BlogManager.GetBlogsCount(Sitecore.Context.Item, categoryID, authorID, tagID, searchText);
+    
+    if (searchHeading != "")
+    {
+        searchHeading = totalRows.ToString() + " " + searchHeading;   
+    }
+    
+}
+
+<div id='@Html.Raw(settingsItem.PrimaryCSSID)' >
+    <h1>@Html.Sitecore().Field(BlogHome.BlogNameFieldId, Sitecore.Feature.XBlog.General.DataManager.GetBlogHomeItem(dataSourceItem != null ? dataSourceItem : Sitecore.Context.Item))</h1>
+    <h3>@Html.Raw(searchHeading)</h3>
+
+    @{
+        
+        
+        if (blogs == null || !blogs.Any())
+        {
+            @Html.Raw("Sorry no matching results were found.");
+        }
+        else
+        {
+           <div class="container-wrapper">
+                <div class="container-fluid">
+                    @foreach (BlogPost blogPost in blogs)
+                    {
+                        <div itemprop="headline">
+                            <h2><a href="@Html.Raw(LinkManager.GetItemUrl(blogPost.InnerItem))">@Html.Raw(blogPost.Title)</a></h2>
+                        </div>
+                        <div class="set authorheading" itemprop="author">
+                            By
+                            @{
+                                string profileImage = "";
+                                if (blogPost.Authors.Any())
+                                {
+                                    List<Sitecore.Data.ID> authorIds = new List<Sitecore.Data.ID>();
+                                    foreach (Author a in blogPost.Authors)
+                                    {
+                                        authorIds.Add(a.ItemId);
+                                    }
+
+                                    List<Author> authors = AuthorManager.GetAuthorsForBlogPost(authorIds);
+
+                                    string authorNames = string.Empty;
+
+                                    foreach (Author a in authors)
+                                    {
+                                        authorNames += a.FullName;
+                                    }
+
+                                    if (authors[0].ProfileImage != null && authors[0].ProfileImage.MediaItem != null && settingsItem.DisplayAuthorImage)
+                                    {
+                                        profileImage = String.Format("<img src=\"{0}?mw={1}\" border=\"0\" />", MediaManager.GetMediaUrl(authors[0].ProfileImage.MediaItem), settingsItem.AuthorImageMaxWidth);
+                                    }
+                                    
+                                    @Html.Raw(profileImage)
+                                    @Html.Raw(authors[0].FullName);
+                                
+                                
+                                }
+                            }
+                            <br />
+                            @Html.Raw(blogPost.PublishDate.DateTime.ToString(settingsItem.BlogListingDateFormat))
+                            
+                        </div>
+                        <p class="clear">
+                            @if (!String.IsNullOrEmpty(blogPost.Summary))
+                            {
+                                @Html.Raw(blogPost.Summary);
+                            }
+                            else
+                            {
+                                @Html.Raw(XBlogHelper.Helpers.Helper.SafeSubstring(blogPost.Summary, settingsItem.DisplaySummaryLength));
+                            }
+                        </p>
+
+                       
+                        <div itemprop="articleSection">
+                            @Html.Raw("<strong>" + settingsItem.BlogListingCategoryTitle + "</strong> " + CategoryManager.GetCommaSeperatedCategoryList(blogPost))
+                        </div>
+                        <div itemprop="articleSection">
+                            @Html.Raw("<strong>" + settingsItem.BlogListingTagTitle + "</strong> " + TagManager.GetCommaSeperatedTagList(blogPost))
+                        </div>
+                        if (settingsItem.ReadMoreLinkText != "")
+                        {
+                            <div class="readmore">
+                                <a href="@Html.Raw(LinkManager.GetItemUrl(blogPost.InnerItem))">@Html.Raw(settingsItem.ReadMoreLinkText)</a>
+                            </div>
+                        }
+                        <br />
+                    }
+                    <div class="pagination">@Html.Raw(BlogManager.GetBlogPagination(settingsItem, currentPage, totalRows, maximumRows))</div>
+                </div>
+            </div>
+    
+        }
+        
+    }
+    
+                
+
+</div>

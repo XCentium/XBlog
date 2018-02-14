@@ -1,0 +1,30 @@
+﻿a, a:hover, a:focus {
+color: #689caa;
+text-decoration: underline;
+background: transparent;
+}
+
+a:visited {
+    color: #689caa;
+}
+
+p {
+    
+color: #4e5c5b;
+margin: .5px;
+
+}
+
+.sc_Text_2 !important {
+color: #8cc542;
+font-size: 3em;
+font-weight: 300;
+margin:1px;
+}
+
+.sc_Text !important{
+color: #4e5c5b;
+font-size: 1.25em;
+font-weight: 100;
+margin:.5px;
+}
