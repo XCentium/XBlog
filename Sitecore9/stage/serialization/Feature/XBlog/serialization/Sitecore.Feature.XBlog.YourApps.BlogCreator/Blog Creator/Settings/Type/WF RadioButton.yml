@@ -1,0 +1,28 @@
+---
+ID: "e3741d27-1235-4fae-aae4-c7b62cff04b0"
+Parent: "783458e2-7a6a-4aa8-8dba-95d2dcd909f7"
+Template: "56e3e9ce-f699-45e5-9938-6fed97da6a65"
+Path: /sitecore/client/Your Apps/Blog Creator/Settings/Type/WF RadioButton
+DB: core
+SharedFields:
+- ID: "832a17fc-fccc-40c5-a68a-82e08c297ff9"
+  Hint: Value
+  Value: 
+- ID: "b9c4c778-412f-4421-933d-1ad57eeb745c"
+  Hint: GroupName
+  Value: BlogType
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20141027T165852
+    - ID: "2a2a3e10-cc00-4044-b1e6-6b761387d8f3"
+      Hint: Text
+      Value: WebForm
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\nashesh

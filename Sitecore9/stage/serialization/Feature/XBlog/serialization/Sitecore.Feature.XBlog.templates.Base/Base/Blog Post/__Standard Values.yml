@@ -1,0 +1,44 @@
+---
+ID: "e5e567b8-b60a-4c87-8b0b-82f2f33cc802"
+Parent: "e5697002-1f90-48ec-b378-e6461475f611"
+Template: "e5697002-1f90-48ec-b378-e6461475f611"
+Path: /sitecore/templates/XBlog/Base/Blog Post/__Standard Values
+DB: master
+SharedFields:
+- ID: "a0cb3965-8884-4c7a-8815-b6b2e5ced162"
+  Hint: __Editors
+  Type: TreelistEx
+  Value: "{59F53BBB-D1F5-4E38-8EBA-0D73109BB59B}"
+- ID: "ac51462c-8a8d-493b-9492-34d1f26f20f1"
+  Hint: __Default Bucket Query
+  Value: "sort:publish_date[desc];-template:{adb6ca4f-03ef-4f47-b9ac-9ce2ba53ff97}"
+- ID: "c9283d9e-7c29-4419-9c28-5a5c8ff53e84"
+  Hint: __Bucketable
+  Type: Checkbox
+  Value: 1
+- ID: "d312103c-b36c-4ca5-864a-c85f9abda503"
+  Hint: __Is Bucket
+  Type: Checkbox
+  Value: 0
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140820T155242
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "9608e520-ef16-49fc-bd92-75cc101e5fec"
+      Hint: Publish Date
+      Value: 20140821T163200
+    - ID: "9821df39-a4bc-476b-baef-2a2922c7a8c3"
+      Hint: Title
+      Value: $name

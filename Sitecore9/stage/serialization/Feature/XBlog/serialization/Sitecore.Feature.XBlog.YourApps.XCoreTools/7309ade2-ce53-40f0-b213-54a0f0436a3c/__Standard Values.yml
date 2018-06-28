@@ -1,0 +1,18 @@
+---
+ID: "046dd67b-ddeb-4f94-9777-5c6664adda0c"
+Parent: "7309ade2-ce53-40f0-b213-54a0f0436a3c"
+Template: "7309ade2-ce53-40f0-b213-54a0f0436a3c"
+Path: /sitecore/client/Your Apps/XCore Tools/Layouts/Renderings/Forms/UploadFiles/UploadFiles Parameter/__Standard Values
+DB: core
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130814T115514
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

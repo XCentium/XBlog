@@ -1,0 +1,40 @@
+﻿@using Sitecore.Feature.XBlog.Areas.XBlog.Items.Blog;
+@using Sitecore.Feature.XBlog.Areas.XBlog.Search;
+@using Sitecore.Mvc;
+@using Sitecore.Data;
+@model Sitecore.Feature.XBlog.Areas.XBlog.Models.Blog.CategoryListModel
+
+@{
+    if (Model == null)
+    {
+        return;
+    }
+    BlogSettings settingsItem = Sitecore.Feature.XBlog.Areas.XBlog.General.DataManager.GetBlogSettingsItem(Model.dataSourceItem != null ? Model.dataSourceItem : Sitecore.Context.Item);
+    Database masterDB = Sitecore.Context.ContentDatabase ?? Sitecore.Configuration.Factory.GetDatabase("master");
+
+}
+
+
+<div id='@Html.Raw(settingsItem.PrimaryCSSID)-CategoryList' >
+    <h3>@Html.Sitecore().Field(BlogSettings.CategoryListTitleFieldId, settingsItem.InnerItem)</h3>
+    @{
+        if (Model.categories == null || !Model.categories.Any())
+        {
+            return;
+        }
+    }
+    <div>
+        @foreach (Category category in Model.categories) 
+        {
+            string itemID = category.ItemId.ToString();
+            string countDisplay = "";
+            if (Model.categoryCount.ContainsKey(itemID) && settingsItem.DisplayCountOnCategoryList)
+            {
+                countDisplay = String.Format(" ({0})", Model.categoryCount[itemID].ToString());
+            }
+            <a href="@Html.Raw(CategoryManager.GetCategoryUrl(category.CategoryName, Model.dataSourceItem != null ? Model.dataSourceItem : Sitecore.Context.Item))">@Html.Raw(category.CategoryName + countDisplay)</a>     
+            <br />
+        }
+    </div>
+ 
+</div>

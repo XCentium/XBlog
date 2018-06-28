@@ -1,0 +1,81 @@
+﻿---
+ID: "5e4e3dc9-c502-4a32-941c-094f014f137e"
+Parent: "8fed7e54-aec9-4432-b593-6229aad779ec"
+Template: "8fed7e54-aec9-4432-b593-6229aad779ec"
+Path: /sitecore/templates/XBlog/Page/MVC/Blog Post/__Standard Values
+DB: master
+SharedFields:
+- ID: "a0cb3965-8884-4c7a-8815-b6b2e5ced162"
+  Hint: __Editors
+  Type: TreelistEx
+  Value: "{59F53BBB-D1F5-4E38-8EBA-0D73109BB59B}"
+- ID: "ac51462c-8a8d-493b-9492-34d1f26f20f1"
+  Hint: __Default Bucket Query
+  Value: "sort:publish_date[desc];"
+- ID: "c9283d9e-7c29-4419-9c28-5a5c8ff53e84"
+  Hint: __Bucketable
+  Type: Checkbox
+  Value: 1
+- ID: "d312103c-b36c-4ca5-864a-c85f9abda503"
+  Hint: __Is Bucket
+  Type: Checkbox
+  Value: 0
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{E515B0B3-B886-4501-8717-F431553DB749}">
+        <r
+          id="{F5780FCD-C19B-4F9B-BE1E-6C639554E7DB}"
+          ph="xbloghead"
+          uid="{C1312C95-AC91-40AE-B69E-2307A6D00B92}" />
+        <r
+          ds=""
+          id="{421836E2-62E5-417B-8666-B1F20688CCBB}"
+          par=""
+          ph="xblogmain"
+          uid="{3487EB7C-A852-4690-8A8D-105EBE1BC09A}" />
+        <r
+          id="{84AAB6DE-DFB6-4427-82DD-376398D8AE15}"
+          ph="xblogright"
+          uid="{D2E38EEA-BA49-49D4-8F25-5EB8FA86F079}" />
+        <r
+          id="{8EBF4B58-D58F-49C4-9D06-47AB2F62D443}"
+          ph="xblogright"
+          uid="{A2F0A405-F4D3-46DD-AA33-048CAFD7BA87}" />
+        <r
+          id="{9CB310DA-E7D3-4A74-B05A-9A84A366941E}"
+          ph="xblogright"
+          uid="{D47AF0ED-023E-4446-9ABD-6727DA114547}" />
+        <r
+          id="{791C3903-24DA-4426-BEC7-33C5A0994AC0}"
+          ph="xblogright"
+          uid="{CCDDF6DD-381F-462E-B469-BDF92783D48F}" />
+        <r
+          id="{01E204BD-670F-4C79-AB78-2E031BBC0A54}"
+          ph="xblogright"
+          uid="{8EDA42A0-DC77-4A0C-A21E-AF6324567ED1}" />
+        <r
+          id="{E329B0DD-CC2F-4C2B-8388-C5E81779CBE6}"
+          ph="xblogright"
+          uid="{EE9C556E-B5B8-42F2-8605-F8421A437E0F}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140820T155242
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "9608e520-ef16-49fc-bd92-75cc101e5fec"
+      Hint: Publish Date
+      Value: 

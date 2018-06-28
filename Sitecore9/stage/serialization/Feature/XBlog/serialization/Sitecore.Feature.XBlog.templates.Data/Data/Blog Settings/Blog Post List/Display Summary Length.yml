@@ -1,0 +1,21 @@
+---
+ID: "7a1e7eac-7496-486f-b902-1c20cbe6676d"
+Parent: "ed51e3af-a53f-4680-afd5-9e2e7844b47a"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/XBlog/Data/Blog Settings/Blog Post List/Display Summary Length
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Integer
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 750
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140907T231555

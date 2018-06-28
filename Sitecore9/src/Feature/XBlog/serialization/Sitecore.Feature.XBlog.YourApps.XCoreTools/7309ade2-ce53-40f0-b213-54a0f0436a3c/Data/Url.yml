@@ -1,0 +1,77 @@
+﻿---
+ID: "c8220b00-6504-4401-a31e-76b0c5ceb9ca"
+Parent: "8d24be09-38d5-4cd7-8f53-624b275d6619"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/client/Your Apps/XCore Tools/Layouts/Renderings/Forms/UploadFiles/UploadFiles Parameter/Data/Url
+DB: core
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+Languages:
+- Language: da
+  Fields:
+  - ID: "9541e67d-ce8c-4225-803d-33f7f29f09ef"
+    Hint: __Short description
+    Value: Angiver databasenavnet.
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20140314T140631:635304027912514138"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+- Language: "de-DE"
+  Fields:
+  - ID: "9541e67d-ce8c-4225-803d-33f7f29f09ef"
+    Hint: __Short description
+    Value: Legt den Datenbanknamen fest.
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20140227T112202:635290969228616843"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+- Language: en
+  Fields:
+  - ID: "9541e67d-ce8c-4225-803d-33f7f29f09ef"
+    Hint: __Short description
+    Value: Sets the database name.
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130821T164239
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+- Language: "ja-JP"
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: データベース
+  - ID: "9541e67d-ce8c-4225-803d-33f7f29f09ef"
+    Hint: __Short description
+    Value: データベース名を設定する
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: データベース
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: "20140227T114019:635290980197436606"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

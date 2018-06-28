@@ -1,0 +1,22 @@
+﻿---
+ID: "71765bcc-3581-4e25-b2a6-3c9f876d1fdd"
+Parent: "2fad99f9-bff1-4858-9c37-8025d80127da"
+Template: "0a98e368-cdb9-4e1e-927c-8e0c24a003fb"
+Path: /sitecore/layout/Sublayouts/XBlogWF/BlogPostSL
+DB: master
+SharedFields:
+- ID: "e42081b6-8a95-4a11-89ce-df70ed502f57"
+  Hint: Path
+  Value: /Components/XBlogWF/Sublayouts/BlogPostSL.ascx
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140820T114232
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

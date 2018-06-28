@@ -1,0 +1,38 @@
+﻿---
+ID: "44d71226-5641-4ff7-92a0-11f5dbe172e0"
+Parent: "751e3636-74fc-4e63-a49c-4299a779e291"
+Template: "e20487f1-5558-41f8-b92b-5b57a1491e99"
+Path: /sitecore/client/Applications/Launch Pad/Page Settings/Shortcuts/XBlog Creator
+DB: core
+SharedFields:
+- ID: "3ef4c3b3-7db3-4e35-b017-28ce9bef450d"
+  Hint: Icon
+  Value: |
+    <image mediapath="" alt="XBlog" width="197" height="127" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{1EEB5AD8-27C8-46EF-BB3C-C00F937B60A8}" />
+- ID: "4aa4a141-36a6-44f8-947d-952027d1723b"
+  Hint: Starting Page Id
+  Value: "{89E4CAE2-386F-4C8F-937F-64336E98C531}"
+- ID: "803a0815-b39b-47c0-b727-58e3c8912c8d"
+  Hint: Database
+  Value: core
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20141022T091342
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\klossome
+    - ID: "9d74244b-6d0b-4689-9fb7-c914f34059e1"
+      Hint: Tooltip
+      Value: Provide a GUID in the Starting Page Id (otherwise, shortcut will not appear)
+    - ID: "ddc2f665-6fa1-40a0-a36d-e4ca86b90759"
+      Hint: Title
+      Value: XBlog

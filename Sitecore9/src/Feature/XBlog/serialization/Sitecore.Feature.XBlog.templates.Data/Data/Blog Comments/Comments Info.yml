@@ -1,0 +1,18 @@
+﻿---
+ID: "4348de21-e6f3-4b03-8684-bd83c6e6b03c"
+Parent: "c3c2d3db-85ca-4120-9ca6-f64b92fa7f0e"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/XBlog/Data/Blog Comments/Comments Info
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140909T114653
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

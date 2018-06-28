@@ -1,0 +1,178 @@
+﻿---
+ID: "89e4cae2-386f-4c8f-937f-64336e98c531"
+Parent: "e9a53290-8618-43ec-9a4b-7da2af424800"
+Template: "b11afccd-c286-4384-b694-4465d6c605de"
+Path: /sitecore/client/Your Apps/Blog Creator
+DB: core
+SharedFields:
+- ID: "5e642935-a6fc-48e9-b039-fe1136ced488"
+  Hint: Theme
+  Value: Oxford
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r>
+      <d
+        id="{3AC0D3A4-D6AE-429F-A79C-F42157D0004E}"
+        l="{4F72A793-BDBC-4262-9523-6AADD8FEA487}">
+        <r
+          id="{DAFAFFB8-74AF-4141-A96A-70B16834CEC6}"
+          par="PageCodeScriptFileName=%2fsitecore+modules%2fXBlog%2fSPEAK%2fXBlogCreator.js"
+          ph="Page.Code"
+          uid="{11A37B05-BDDD-439E-A362-C6475BF21FB4}" />
+        <r
+          id="{DAFAFFB8-74AF-4141-A96A-70B16834CEC6}"
+          par="PageCodeScriptFileName=%2fsitecore%2fshell%2fclient%2fYourApps%2fBlog+Creator%2fXBlogCreator.css"
+          ph="Page.Code"
+          uid="{47515C7C-218B-4695-8E4D-8115CCDC79F0}" />
+        <r
+          id="{BE007891-2D9C-4E67-943C-752DBA0C041F}"
+          ph="Page.Body"
+          uid="{11C19609-9BC1-4143-8E30-D742C707BDD8}" />
+        <r
+          id="{5AE97C0C-EE88-4564-A363-4FA11C01C90A}"
+          ph="GlobalHeader"
+          uid="{41BC7979-81BB-4132-8562-2E9FA495BC1F}" />
+        <r
+          id="{EC86834B-890C-405C-BB36-CA25044909E1}"
+          ph="GlobalFooter"
+          uid="{73311B23-5C0E-4766-B451-FDA88EF2FB52}" />
+        <r
+          id="{93CEEFCD-2DE1-40AF-AE9A-EBBFBCCC522F}"
+          ph="ApplicationHeader"
+          uid="{E4A7DAF2-C59D-40DB-B008-75F6874D538F}" />
+        <r
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=txtHeader&amp;IsVisible=1&amp;Text=Blog+Creator+%2f+Importer"
+          ph="ApplicationHeader.Title"
+          uid="{6591A917-25B6-4DFA-A74E-9A4C09891851}" />
+        <r
+          id="{73C16115-8B56-43AF-8EA3-4D704FCDA127}"
+          par="Id=Separator3&amp;IsVisible=1"
+          ph="ApplicationContent"
+          uid="{B4B94E81-08BE-4D14-A94F-946AB6D3E9EE}" />
+        <r
+          ds="{1EEB5AD8-27C8-46EF-BB3C-C00F937B60A8}"
+          id="{F517C5E4-9A53-46C3-B922-5B44E6DAAA48}"
+          par="Id=imgXBlog&amp;IsVisible=1&amp;Height=110"
+          ph="ApplicationContent"
+          uid="{28B25871-3218-4CD2-B248-6C28BCCABEAF}" />
+        <r
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=Text1&amp;Text=+Welcome+to+the+XBlog+Creator.+Answer+a+few+simple+questions+and+we%27ll+get+your+blog+up+and+running+in+no+time!+Ok%2c+some+time..."
+          ph="ApplicationContent"
+          uid="{4B4058AC-C820-4CAB-AA61-CA1C7B974029}" />
+        <r
+          id="{73C16115-8B56-43AF-8EA3-4D704FCDA127}"
+          par="Id=Separator1"
+          ph="ApplicationContent"
+          uid="{69EF9435-C711-46C3-AF0D-5CCE22BA89C7}" />
+        <r
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=txtTitle&amp;Text=Enter+the+name+of+your+Blog%3a+"
+          ph="ApplicationContent"
+          uid="{9CCF493D-156D-46AB-B3FC-F8C2261897F3}" />
+        <r
+          id="{57F86E9A-1844-45CE-BF8A-62900AE17A92}"
+          par="IsEnabled=1&amp;Id=tbBlogTitle&amp;IsVisible=1"
+          ph="ApplicationContent"
+          uid="{8243149D-DF31-41BF-906E-FFB035A758D7}" />
+        <r
+          id="{73C16115-8B56-43AF-8EA3-4D704FCDA127}"
+          par="Id=Separator6"
+          ph="ApplicationContent"
+          uid="{B469CCA8-54F4-4C5C-8032-9BEB66DBFD0E}" />
+        <r
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=txtType&amp;Text=This+site+is+built+using%3a++"
+          ph="ApplicationContent"
+          uid="{A78F4907-5ED5-46E5-8E20-9751FD10417F}" />
+        <r
+          ds="{FA717136-108B-4EB6-9637-065DA274359C}"
+          id="{8BECEF35-1374-4D25-8A1A-4CDCC4218AA9}"
+          par="IsChecked=0&amp;Id=rbMVC"
+          ph="ApplicationContent"
+          uid="{97CCBB0B-1ED3-4A5B-94E2-596B75057AE3}" />
+        <r
+          ds="{E3741D27-1235-4FAE-AAE4-C7B62CFF04B0}"
+          id="{8BECEF35-1374-4D25-8A1A-4CDCC4218AA9}"
+          par="IsChecked=0&amp;Id=rbWF"
+          ph="ApplicationContent"
+          uid="{1898A727-1C66-433A-9875-E90E475E3669}" />
+        <r
+          id="{73C16115-8B56-43AF-8EA3-4D704FCDA127}"
+          par="Id=Separator4"
+          ph="ApplicationContent"
+          uid="{25CAFCBD-3346-4A52-B270-2C6EF7307947}" />
+        <r
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=txtLocation&amp;Text=Select+the+location+for+your+Blog+Home%3a+"
+          ph="ApplicationContent"
+          uid="{4E7C3218-1E06-44FF-A400-BC07476CE61B}" />
+        <r
+          id="{08B6767B-8E8A-41C8-8880-EFEBB4EAE0E3}"
+          par="Id=tvSitecore&amp;SelectMode=1"
+          ph="ApplicationContent"
+          uid="{E9F11B27-9D28-4998-95E8-7358690F0682}" />
+        <r
+          id="{73C16115-8B56-43AF-8EA3-4D704FCDA127}"
+          par="Id=Separator5"
+          ph="ApplicationContent"
+          uid="{A9BEBAE8-1185-400A-913D-3ACBF2A404DF}" />
+        <r
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=txtUpload&amp;IsVisible=1&amp;Text=If+you+have+an+export+from+WordPress%2c+that+you+would+like+to+import%2c+upload+the+XML+here."
+          ph="ApplicationContent"
+          uid="{EACA3111-C790-4D1F-848F-33E58299030A}" />
+        <r
+          id="{9F624611-D7C2-4866-B227-3A5EBEFC564F}"
+          par="Id=ufImport&amp;IsVisible=1&amp;Url=%2fapi%2fsitecore%2fImport%2fUpload"
+          ph="ApplicationContent"
+          uid="{D29E8236-0E37-4395-9599-22978E536E10}" />
+        <r
+          id="{F05CDBA5-03ED-46D2-B58C-C0283F86C332}"
+          par="Id=UploadFilesInfo"
+          ph="ApplicationContent"
+          uid="{52785509-20A7-4A93-B1EA-5F330B81B046}" />
+        <r
+          id="{73C16115-8B56-43AF-8EA3-4D704FCDA127}"
+          par="Id=Separator2"
+          ph="ApplicationContent"
+          uid="{7D0B54D4-16D1-4462-B438-D4FA3277E40B}" />
+        <r
+          id="{913AB005-2527-4C2D-9827-FB3A8DFB135C}"
+          par="Id=btnCreateBlog&amp;Text=Create+Blog!"
+          ph="ApplicationContent"
+          uid="{55394A0D-6399-4157-A728-FEED77B87710}" />
+        <r
+          ds="{7FCC87E3-E227-410B-BC0C-329DADB23EB9}"
+          id="{F517C5E4-9A53-46C3-B922-5B44E6DAAA48}"
+          par="Id=imgLoader&amp;IsVisible=0"
+          ph="ApplicationContent"
+          uid="{43CFC7AD-F66A-44C0-9FCE-BD0236BDE0BB}" />
+        <r
+          id="{162FC747-B9E6-4FCE-A96C-1EFE125643F2}"
+          par="Id=hbtnSitecore&amp;Text=Take+me+to+the+Sitecore+Desktop&amp;IsVisible=0&amp;NavigateUrl=%2fsitecore%2fshell%2fdefault.aspx%3fsc_lang%3den"
+          ph="ApplicationContent"
+          uid="{8C342647-040F-4773-989F-5690DBF4C63E}" />
+        <p
+          key="content"
+          uid="{C589F541-7CC5-4738-B143-9D461D7DE557}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20141022T101736
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\klossome
+    - ID: "7205a57f-93b4-413a-aa9a-6b16bbc59565"
+      Hint: BrowserTitle
+      Value: XBlog

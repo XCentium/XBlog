@@ -1,0 +1,183 @@
+---
+ID: "33cce90d-f58a-48d8-a45d-c029cbcd6b1d"
+Parent: "0951b1c7-0699-415f-9ff5-ecdfeaec79d6"
+Template: "0951b1c7-0699-415f-9ff5-ecdfeaec79d6"
+Path: /sitecore/templates/XBlog/Data/Blog Settings/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "03c54150-027e-43c0-82bc-eca3b4e13faf"
+      Hint: Recent Blog Max Posts
+      Value: 3
+    - ID: "07a26628-c3cd-4063-bc5e-b9e6cd246039"
+      Hint: Recent Blog Title
+      Value: Recent Posts
+    - ID: "0d47137b-b480-4b68-9130-cbfcb1f8e9cc"
+      Hint: Display Count on Tag List
+      Type: Checkbox
+      Value: 1
+    - ID: "10fabf4c-1a36-47e2-bd7d-14a72d4d0621"
+      Hint: Author View List Title
+      Value: Author Bios
+    - ID: "130fc162-9f0b-4925-9aaf-4abfc17b0397"
+      Hint: Blog Post Date Format
+      Value: MMMM d, yyyy
+    - ID: "178c972e-105b-4a39-8b54-e39f5abc9738"
+      Hint: Include Twitter on Blog Post
+      Type: Checkbox
+      Value: 1
+    - ID: "1dc23199-e00b-4cf7-9b71-e1833577ffa5"
+      Hint: Search Filter Title
+      Value: Results for Search 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140901T143205
+    - ID: "25ecbf1b-12c9-414c-8bfc-1bad66ab8b5d"
+      Hint: Category List Title
+      Value: Categories
+    - ID: "27e627b2-b350-4d66-b5a3-a6652451ecea"
+      Hint: Display Tags on Blog Post List
+      Type: Checkbox
+      Value: 1
+    - ID: "4089f518-e690-4306-892e-fe9c4a66b018"
+      Hint: Primary CSS ID
+      Value: XB
+    - ID: "48c7b32d-a72d-4c27-97fa-79495b322f6c"
+      Hint: PageSize
+      Value: 5
+    - ID: "4bcb5a68-38b8-4cb3-a05d-f96f203452a1"
+      Hint: Tag Filter Title
+      Value: Results for Tag 
+    - ID: "53143bf4-e165-47d0-a8f1-b4a9edba8dc1"
+      Hint: Author Image Max Width
+      Value: 40
+    - ID: "535af7aa-06a7-4401-a9c2-94125b674056"
+      Hint: Include Email on Blog Post
+      Type: Checkbox
+      Value: 1
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zmalmquist
+    - ID: "5ea82718-bfc0-4ecb-b4fa-d68be20165d0"
+      Hint: Tag List Title
+      Value: Tags
+    - ID: "5f77bbb1-c67e-4e5d-89e8-b99816399b54"
+      Hint: Display Count on Category List
+      Type: Checkbox
+      Value: 1
+    - ID: "617a76a3-8d9a-4ae2-a8c3-c994a6b0854f"
+      Hint: Include Google Plus on Blog Post
+      Type: Checkbox
+      Value: 1
+    - ID: "658d3ed0-83c1-4806-91d2-43d2aaf784fa"
+      Hint: Author List Title
+      Value: Authors
+    - ID: "6884f790-3e7a-4202-8e71-5fbd32b0b25e"
+      Hint: Display Count on Author List
+      Type: Checkbox
+      Value: 1
+    - ID: "6c723234-3087-4a86-8c45-d80b27c01db2"
+      Hint: First Page Text
+      Value: First
+    - ID: "6e227dfb-bbd0-4ae7-8346-360db6a7e8b3"
+      Hint: Include Facebook on Blog Post
+      Type: Checkbox
+      Value: 1
+    - ID: "7101555f-7727-43c4-91c1-c096aa6b66b2"
+      Hint: Order Category on Count
+      Type: Checkbox
+      Value: 1
+    - ID: "738e6b93-f6dd-43a0-aec0-3b6f9fe446ee"
+      Hint: Blog Listing Tag Title
+      Value: "Tags:"
+    - ID: "7a1e7eac-7496-486f-b902-1c20cbe6676d"
+      Hint: Display Summary Length
+      Value: 50
+    - ID: "8087935c-2576-419e-8399-5186a86f6ebd"
+      Hint: Display Category on Blog Post List
+      Type: Checkbox
+      Value: 1
+    - ID: "84275cb4-a3fd-4635-910f-cb7a580358f4"
+      Hint: Display Tags on Blog Post
+      Type: Checkbox
+      Value: 1
+    - ID: "90880fc1-0eea-419c-ad89-de9ee07ba976"
+      Hint: Last Page Text
+      Value: Last
+    - ID: "a297ffb7-3ad6-4f87-96ea-79329bd8b45d"
+      Hint: Blog Listing Date Format
+      Value: MMMM d, yyyy
+    - ID: "a5ab89a6-c90e-4fe9-a15d-95f76847a338"
+      Hint: Display Author Image
+      Type: Checkbox
+      Value: 1
+    - ID: "a8beec09-54e0-4551-af7d-c5ef2e657871"
+      Hint: Author List Display Image
+      Type: Checkbox
+      Value: 1
+    - ID: "a8e927f5-af7f-4b7d-8040-0be4905db96b"
+      Hint: Author List Max Authors to Display
+      Value: 5
+    - ID: "a9d3c4a0-c587-4e9b-9a32-3d3088cb87cd"
+      Hint: Order Tag on Count
+      Type: Checkbox
+      Value: 1
+    - ID: "aeeaf42e-56b6-465c-9af5-8e560ba10d33"
+      Hint: Display Category on Blog Post
+      Type: Checkbox
+      Value: 1
+    - ID: "c233523d-b0a1-41ef-b0c4-1e0454e67174"
+      Hint: Category Filter Title
+      Value: Results for Category 
+    - ID: "cb007726-d424-4dc3-9e10-e141a94db6d1"
+      Hint: Author List Image Max Width
+      Value: 40
+    - ID: "cc970f6a-8469-47f4-8ee6-9aac5a407e9d"
+      Hint: Display Filter Message
+      Type: Checkbox
+      Value: 1
+    - ID: "ceb111fb-3d94-4fad-bdd3-1715c0459416"
+      Hint: Include Linkedin on Blog Post
+      Type: Checkbox
+      Value: 1
+    - ID: "d1ce9739-3890-4b02-8a88-a75d99453473"
+      Hint: Related Blog Title
+      Value: Related Posts
+    - ID: "da23a58a-1bc9-4f92-8437-bda6c598455b"
+      Hint: Order Author on Count
+      Type: Checkbox
+      Value: 1
+    - ID: "dc6a883c-a149-42f4-ac3a-108823ade29a"
+      Hint: Previous Page Text
+      Value: Prev
+    - ID: "def3121f-308a-496f-915b-47e1487fb76d"
+      Hint: Blog Listing Category Title
+      Value: "Categories:"
+    - ID: "df363ed4-add2-417a-8937-0caf71d520a9"
+      Hint: Search Button Value
+      Value: Search
+    - ID: "eeb07890-d6f8-487f-beb4-0d04a838da0d"
+      Hint: Related Blog Max Posts
+      Value: 3
+    - ID: "f3efd02d-db90-4a89-834e-c013275b8fa9"
+      Hint: Author View Image Max Width
+      Value: 100
+    - ID: "f4e4e966-238f-4e0b-a83d-de847387d77f"
+      Hint: Tag Cloud Title
+      Value: Tag Cloud
+    - ID: "fa114f5b-6f95-4bee-8bb6-16dc1fd53364"
+      Hint: Read More Link Text
+      Value: Continue Reading >
+    - ID: "fb3a03c3-95e7-4945-bd40-68cc6646fea7"
+      Hint: Next Page Text
+      Value: Next
+    - ID: "fdfdcb3f-f511-4a15-bef8-bf1699d43b25"
+      Hint: Author Filter Title
+      Value: Results for Author 
+    - ID: "fffb7fab-d7b3-4c25-bcaa-022396a6beb3"
+      Hint: Author View All Link Text
+      Value: See all authors >

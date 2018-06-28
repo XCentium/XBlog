@@ -1,0 +1,21 @@
+﻿---
+ID: "f88c92e3-c51a-445d-a4b8-74b46ba212c5"
+Parent: "f3fdfc91-c3d6-480d-83eb-74333ec2de1c"
+Template: "f3fdfc91-c3d6-480d-83eb-74333ec2de1c"
+Path: /sitecore/templates/XBlog/Data/Blog Author/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140822T095439
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "ae1b3ca1-21b0-4d6a-9327-17d5571335df"
+      Hint: Full Name
+      Value: $name

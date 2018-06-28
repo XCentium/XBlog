@@ -1,0 +1,18 @@
+﻿---
+ID: "74fb642c-f24b-43d9-a5a2-2d68c15cdbb7"
+Parent: "207b1f0d-fcf2-4f86-b270-a20fd012ceb8"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Settings/Validation Rules/Field Rules/Project
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/folder_window.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170420T203845Z

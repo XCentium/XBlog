@@ -1,0 +1,23 @@
+﻿---
+ID: "ca4c4aa1-23ba-42f8-a49d-507de4fdeae8"
+Parent: "a83e5283-6c18-4e20-805d-1399d6317208"
+Template: "a83e5283-6c18-4e20-805d-1399d6317208"
+Path: /sitecore/templates/XBlog/Data/Blog Authors/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{F3FDFC91-C3D6-480D-83EB-74333EC2DE1C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140822T095400
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

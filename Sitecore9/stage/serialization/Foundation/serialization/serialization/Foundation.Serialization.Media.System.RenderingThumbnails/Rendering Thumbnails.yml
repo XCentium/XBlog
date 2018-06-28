@@ -1,0 +1,18 @@
+---
+ID: "95234d77-60eb-4483-ba39-133591ddaee8"
+Parent: "7f864298-a4d8-4ce5-b8ac-a6d4dba439d3"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/System/Rendering Thumbnails
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Software/16x16/elements1.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170512T055040Z

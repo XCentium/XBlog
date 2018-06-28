@@ -1,0 +1,19 @@
+---
+ID: "689e18bd-5e1f-4783-92af-038d977bfb8d"
+Parent: "e9a53290-8618-43ec-9a4b-7da2af424800"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/client/Your Apps/XCore Tools
+DB: core
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: tree list
+  Value: "{D7CF8B7E-083D-4351-AEF2-2BCD2D794826}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140428T151955
