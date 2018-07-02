@@ -92,9 +92,6 @@
   <ItemGroup>
     <Content Include="App_Config\Include\XBlog.Search.config" />
     <Content Include="App_Config\Include\XBlog.Settings.config" />
-    <Content Include="App_Config\Include\XBlog.Sitecore.Buckets.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Components\XBlog Assets\Icons\RRSSB\facebook.svg" />
     <Content Include="Components\XBlog Assets\Icons\RRSSB\github.svg" />
     <Content Include="Components\XBlog Assets\Icons\RRSSB\google_plus.svg" />

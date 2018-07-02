@@ -144,7 +144,7 @@ namespace Sitecore.Feature.XBlog.Areas.XBlog.General
         {
             get
             {
-                return Settings.GetSetting("XBSearchAuthor", "author_t");
+                return Settings.GetSetting("XBSearchAuthor", "blog_author_t");
             }
         }
 
@@ -152,7 +152,7 @@ namespace Sitecore.Feature.XBlog.Areas.XBlog.General
         {
             get
             {
-                return Settings.GetSetting("XBSearchTags", "tags_t");
+                return Settings.GetSetting("XBSearchTags", "blog_tags_t");
             }
         }
 
@@ -160,7 +160,7 @@ namespace Sitecore.Feature.XBlog.Areas.XBlog.General
         {
             get
             {
-                return Settings.GetSetting("XBSearchCategory", "category_t");
+                return Settings.GetSetting("XBSearchCategory", "blog_category_t");
             }
         }
 
