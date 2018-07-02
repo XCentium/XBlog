@@ -2,7 +2,7 @@
 ID: "90880fc1-0eea-419c-ad89-de9ee07ba976"
 Parent: "29e3116f-5984-482c-8251-266b8a21ab2c"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Pagination/Last Page Text
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Pagination/Last Page Text
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

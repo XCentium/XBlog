@@ -1,0 +1,24 @@
+﻿@using Sitecore.Feature.XBlog.Items.Blog
+@using Sitecore.Feature.XBlog.Search
+@using Sitecore.Feature.XBlog
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Data
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@using System.Text.RegularExpressions
+@model Sitecore.Feature.XBlog.Models.Blog.MetaModel
+
+@{
+    if (Model == null)
+    {
+        return;
+    }
+}
+
+
+<meta property="og:url" content="@Html.Raw(Model.ogURL)" />
+<meta property="og:title" content="@Html.Raw(Model.title)" />
+<meta property="og:description" content="@Html.Raw(Model.description)" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="@Html.Raw(Model.image)" />

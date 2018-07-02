@@ -1,0 +1,40 @@
+﻿@using Sitecore.Feature.XBlog.Items.Blog;
+@using Sitecore.Feature.XBlog.Search;
+@using Sitecore.Feature.XBlog.General;
+@using Sitecore.Data.Items;
+@using Sitecore.Mvc;
+@model Sitecore.Feature.XBlog.Models.Blog.TagListModel
+
+@{
+    if (Model == null)
+    {
+        return;
+    }
+    BlogSettings settingsItem = DataManager.GetBlogSettingsItem(Model.dataSourceItem != null ? Model.dataSourceItem : Sitecore.Context.Item);
+}
+
+
+<div id='@Html.Raw(settingsItem.PrimaryCSSID)-TagCloud' >
+    <h3>@Html.Sitecore().Field(BlogSettings.TagCloudTitleFieldId, settingsItem.InnerItem)</h3>
+    @{
+        if (Model.tags == null || !Model.tags.Any())
+        {
+            return;
+        }
+    }
+
+    @foreach (Tag tag in Model.tags) 
+    {
+        string itemID = tag.ItemId.ToString();
+        if (Model.tagCount.ContainsKey(itemID))
+        {
+            string cssClass = TagManager.GetTagCloudClass(Model.tagCount[itemID], Model.tagCount["max"]);
+
+            if (cssClass != "none")
+            {
+                <a href="@Html.Raw(TagManager.GetTagUrl(tag.TagName, Model.dataSourceItem != null ? Model.dataSourceItem : Sitecore.Context.Item))" class="@Html.Raw(cssClass)">@Html.Raw(tag.TagName)</a>
+            }
+        }
+    }
+ 
+</div>

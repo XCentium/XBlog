@@ -16,7 +16,7 @@ SharedFields:
   Value: Sitecore.Feature.XBlog
 - ID: "9fe6154a-a16e-4827-99f6-f51533c34ec8"
   Hint: Class
-  Value: Sitecore.Feature.XBlog.Areas.XBlog.Fields.XBlogMultilist
+  Value: Sitecore.Feature.XBlog.Fields.XBlogMultilist
 Languages:
 - Language: en
   Versions:

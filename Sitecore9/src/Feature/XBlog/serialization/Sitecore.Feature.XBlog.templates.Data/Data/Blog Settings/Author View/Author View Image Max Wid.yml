@@ -2,7 +2,7 @@
 ID: "f3efd02d-db90-4a89-834e-c013275b8fa9"
 Parent: "a4a356ab-eaf3-4f12-8109-d27588c7e0e0"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Author View/Author View Image Max Width
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Author View/Author View Image Max Width
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

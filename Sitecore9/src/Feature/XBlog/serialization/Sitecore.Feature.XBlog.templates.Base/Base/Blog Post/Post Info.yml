@@ -2,7 +2,7 @@
 ID: "aaa3fcb7-33c1-4728-af8f-6b2dd1fe94a1"
 Parent: "e5697002-1f90-48ec-b378-e6461475f611"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/XBlog/Base/Blog Post/Post Info
+Path: /sitecore/templates/Feature/XBlog/Base/Blog Post/Post Info
 DB: master
 Languages:
 - Language: en

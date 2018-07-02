@@ -1,0 +1,107 @@
+﻿@using Sitecore.Feature.XBlog.Items.Blog
+@using Sitecore.Feature.XBlog.Models.Blog
+@using Sitecore.Feature.XBlog.Search
+@using Sitecore.Feature.XBlog.General
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@*@inherits System.Web.Mvc.WebViewPage*@
+@model Sitecore.Feature.XBlog.Models.Blog.BlogListingModel
+
+
+@{
+    BlogSettings settingsItem = DataManager.GetBlogSettingsItem(Model.dataSourceItem != null ? Model.dataSourceItem : Sitecore.Context.Item);
+}
+
+<div id='@Html.Raw(settingsItem.PrimaryCSSID)' >
+    <h1>@Html.Sitecore().Field(BlogHome.BlogNameFieldId, Sitecore.Feature.XBlog.General.DataManager.GetBlogHomeItem(Model.dataSourceItem != null ? Model.dataSourceItem : Sitecore.Context.Item))</h1>
+    <h3>@Html.Raw(Model.SearchHeading)</h3>
+
+    @{
+        if (Model.BlogPosts == null || !Model.BlogPosts.Any())
+        {
+            @Html.Raw("Sorry no matching results were found.");
+        }
+        else
+        {
+           <div class="container-wrapper">
+                <div class="container-fluid">
+                    @foreach (BlogPost blogPost in Model.BlogPosts)
+                    {
+                        <div itemprop="headline">
+                            <h2><a href="@Html.Raw(LinkManager.GetItemUrl(blogPost.InnerItem))">@Html.Raw(blogPost.Title)</a></h2>
+                        </div>
+                        <div class="set authorheading" itemprop="author">
+                            By
+                            @{
+                                string profileImage = "";
+                                if (blogPost.Authors.Any())
+                                {
+                                    List<Sitecore.Data.ID> authorIds = new List<Sitecore.Data.ID>();
+                                    foreach (Author a in blogPost.Authors)
+                                    {
+                                        authorIds.Add(a.ItemId);
+                                    }
+
+                                    List<Author> authors = AuthorManager.GetAuthorsForBlogPost(authorIds);
+
+                                    string authorNames = string.Empty;
+
+                                    foreach (Author a in authors)
+                                    {
+                                        authorNames += a.FullName;
+                                    }
+
+                                    if (authors[0].ProfileImage != null && authors[0].ProfileImage.MediaItem != null && settingsItem.DisplayAuthorImage)
+                                    {
+                                        profileImage = String.Format("<img src=\"{0}?mw={1}\" border=\"0\" />", MediaManager.GetMediaUrl(authors[0].ProfileImage.MediaItem), settingsItem.AuthorImageMaxWidth);
+                                    }
+                                    
+                                    @Html.Raw(profileImage)
+                                    @Html.Raw(authors[0].FullName);
+                                
+                                
+                                }
+                            }
+                            <br />
+                            @Html.Raw(blogPost.PublishDate.DateTime.ToString(settingsItem.BlogListingDateFormat))
+                            
+                        </div>
+                        <p class="clear">
+                            @if (!String.IsNullOrEmpty(blogPost.Summary))
+                            {
+                                @Html.Raw(blogPost.Summary);
+                            }
+                            else
+                            {
+                                @Html.Raw(Sitecore.Feature.XBlog.Helpers.Helper.SafeSubstring(blogPost.Summary, settingsItem.DisplaySummaryLength));
+                            }
+                        </p>
+
+                       
+                        <div itemprop="articleSection">
+                            @Html.Raw("<strong>" + settingsItem.BlogListingCategoryTitle + "</strong> " + CategoryManager.GetCommaSeperatedCategoryList(blogPost))
+                        </div>
+                        <div itemprop="articleSection">
+                            @Html.Raw("<strong>" + settingsItem.BlogListingTagTitle + "</strong> " + TagManager.GetCommaSeperatedTagList(blogPost))
+                        </div>
+                        if (settingsItem.ReadMoreLinkText != "")
+                        {
+                            <div class="readmore">
+                                <a href="@Html.Raw(LinkManager.GetItemUrl(blogPost.InnerItem))">@Html.Raw(settingsItem.ReadMoreLinkText)</a>
+                            </div>
+                        }
+                        <br />
+                    }
+                    <div class="pagination">@Html.Raw(BlogManager.GetBlogPagination(settingsItem, Model.CurrentPage, Model.TotalRows, Model.MaximumRows))</div>
+                </div>
+            </div>
+    
+        }
+        
+    }
+    
+                
+
+</div>

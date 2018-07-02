@@ -1,8 +1,8 @@
 ﻿---
 ID: "63db2e91-df58-48b8-89de-a4faecb1e868"
-Parent: "75cc5ce4-8979-4008-9d3c-806477d57619"
+Parent: "470a0483-80dc-4425-93b9-9c79c7c57a11"
 Template: "93227c5d-4fef-474d-94c0-f252ec8e8219"
-Path: /sitecore/layout/Layouts/XBlog
+Path: /sitecore/layout/Layouts/Feature/XBlog
 DB: master
 Languages:
 - Language: en

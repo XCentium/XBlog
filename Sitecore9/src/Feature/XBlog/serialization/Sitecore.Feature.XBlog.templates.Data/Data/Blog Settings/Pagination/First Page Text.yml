@@ -2,7 +2,7 @@
 ID: "6c723234-3087-4a86-8c45-d80b27c01db2"
 Parent: "29e3116f-5984-482c-8251-266b8a21ab2c"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Pagination/First Page Text
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Pagination/First Page Text
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

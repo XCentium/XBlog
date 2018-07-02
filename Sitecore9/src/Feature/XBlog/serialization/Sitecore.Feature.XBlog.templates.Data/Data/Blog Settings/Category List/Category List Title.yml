@@ -2,7 +2,7 @@
 ID: "25ecbf1b-12c9-414c-8bfc-1bad66ab8b5d"
 Parent: "718507b6-0fc9-49cb-91b0-99a40a39c039"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Category List/Category List Title
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Category List/Category List Title
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

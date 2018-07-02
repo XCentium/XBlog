@@ -9,7 +9,7 @@
 // <url>http://trac.sitecore.net/SublayoutParameterHelper/</url>
 //-------------------------------------------------------------------------------------------------
 
-namespace Sitecore.Feature.XBlog.Areas.XBlog
+namespace Sitecore.Feature.XBlog
 {
     using System;
     using System.Collections.Specialized;

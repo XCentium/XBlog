@@ -2,7 +2,7 @@
 ID: "535af7aa-06a7-4401-a9c2-94125b674056"
 Parent: "bf07d7a7-1207-46bc-9cd8-13639022e431"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Blog Post/Include Email on Blog Post
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Blog Post/Include Email on Blog Post
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

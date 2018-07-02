@@ -2,7 +2,7 @@
 ID: "f728462f-4f42-47a3-9933-b248e76a8abc"
 Parent: "8b11616f-f9f1-4dc0-bf8a-80d6026e8ad3"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/XBlog/Data/Blog Tag/Tag Info
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Tag/Tag Info
 DB: master
 Languages:
 - Language: en

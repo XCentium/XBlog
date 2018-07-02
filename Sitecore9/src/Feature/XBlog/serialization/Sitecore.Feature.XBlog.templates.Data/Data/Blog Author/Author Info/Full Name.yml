@@ -2,7 +2,7 @@
 ID: "ae1b3ca1-21b0-4d6a-9327-17d5571335df"
 Parent: "35e57b83-0ab1-4e4b-b510-69813ef1263c"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Author/Author Info/Full Name
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Author/Author Info/Full Name
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

@@ -1,0 +1,72 @@
+﻿---
+ID: "71b50633-edde-4e4b-b927-3092ab3b5272"
+Parent: "eb0e2247-c025-4e7b-90d2-65a21bf24467"
+Template: "eb0e2247-c025-4e7b-90d2-65a21bf24467"
+Path: /sitecore/templates/Feature/XBlog/Page/Template/Blog Home/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: 
+- ID: "ac51462c-8a8d-493b-9492-34d1f26f20f1"
+  Hint: __Default Bucket Query
+  Value: "sort:publish_date[desc];"
+- ID: "d312103c-b36c-4ca5-864a-c85f9abda503"
+  Hint: __Is Bucket
+  Type: Checkbox
+  Value: 1
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{E515B0B3-B886-4501-8717-F431553DB749}">
+        <r
+          ds=""
+          id="{335F3EE5-EECB-4BB1-98A7-1E85490E2741}"
+          par=""
+          ph="xblogmain"
+          uid="{9B8BE445-3232-47F0-BE32-54F620061871}" />
+        <r
+          id="{07A31C45-E3E5-4766-8406-668641F1A8A0}"
+          ph="xblogright"
+          uid="{DA55984E-EE11-43F4-86A1-A482287B8F65}" />
+        <r
+          ds=""
+          id="{84AAB6DE-DFB6-4427-82DD-376398D8AE15}"
+          par=""
+          ph="xblogright"
+          uid="{51657DAF-47EA-4917-93D7-4BD7A4305A26}" />
+        <r
+          id="{8EBF4B58-D58F-49C4-9D06-47AB2F62D443}"
+          ph="xblogright"
+          uid="{0077F8C1-22DE-4DBF-9900-5407C9E65970}" />
+        <r
+          id="{9CB310DA-E7D3-4A74-B05A-9A84A366941E}"
+          ph="xblogright"
+          uid="{E02C860E-397D-426D-8357-BE36B241043B}" />
+        <r
+          id="{791C3903-24DA-4426-BEC7-33C5A0994AC0}"
+          ph="xblogright"
+          uid="{861F13EB-6D0C-4D64-A3BF-4CE7DC14CE04}" />
+        <r
+          id="{01E204BD-670F-4C79-AB78-2E031BBC0A54}"
+          ph="xblogright"
+          uid="{00243435-770D-4582-97F8-4C3A6A4AE862}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140820T152830
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

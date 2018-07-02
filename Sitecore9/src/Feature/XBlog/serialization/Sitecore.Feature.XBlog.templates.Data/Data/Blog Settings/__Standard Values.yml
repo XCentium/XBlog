@@ -2,7 +2,7 @@
 ID: "33cce90d-f58a-48d8-a45d-c029cbcd6b1d"
 Parent: "0951b1c7-0699-415f-9ff5-ecdfeaec79d6"
 Template: "0951b1c7-0699-415f-9ff5-ecdfeaec79d6"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/__Standard Values
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/__Standard Values
 DB: master
 Languages:
 - Language: en

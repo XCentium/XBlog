@@ -2,7 +2,7 @@
 ID: "4348de21-e6f3-4b03-8684-bd83c6e6b03c"
 Parent: "c3c2d3db-85ca-4120-9ca6-f64b92fa7f0e"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/XBlog/Data/Blog Comments/Comments Info
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Comments/Comments Info
 DB: master
 Languages:
 - Language: en

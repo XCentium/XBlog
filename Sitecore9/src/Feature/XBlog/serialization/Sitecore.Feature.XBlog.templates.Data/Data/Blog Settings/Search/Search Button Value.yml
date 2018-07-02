@@ -2,7 +2,7 @@
 ID: "df363ed4-add2-417a-8937-0caf71d520a9"
 Parent: "8f43849e-44f1-4327-9b13-cb038d889503"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Search/Search Button Value
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Search/Search Button Value
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

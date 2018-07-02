@@ -2,7 +2,7 @@
 ID: "130fc162-9f0b-4925-9aaf-4abfc17b0397"
 Parent: "bf07d7a7-1207-46bc-9cd8-13639022e431"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Blog Post/Blog Post Date Format
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Blog Post/Blog Post Date Format
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

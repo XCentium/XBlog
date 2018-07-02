@@ -2,7 +2,7 @@
 ID: "7163e083-1126-4615-8393-8504366f33b1"
 Parent: "0951b1c7-0699-415f-9ff5-ecdfeaec79d6"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Folders
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Folders
 DB: master
 Languages:
 - Language: en

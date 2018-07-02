@@ -2,7 +2,7 @@
 ID: "178c972e-105b-4a39-8b54-e39f5abc9738"
 Parent: "bf07d7a7-1207-46bc-9cd8-13639022e431"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/XBlog/Data/Blog Settings/Blog Post/Include Twitter on Blog Post
+Path: /sitecore/templates/Feature/XBlog/Data/Blog Settings/Blog Post/Include Twitter on Blog Post
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
