@@ -90,7 +90,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\XBlog.Search.config" />
     <Content Include="App_Config\Include\XBlog.Settings.config" />
     <Content Include="App_Config\Include\XBlog.Sitecore.Buckets.config">
       <SubType>Designer</SubType>
@@ -124,6 +123,8 @@
     <Content Include="sitecore\shell\client\YourApps\XCore Tools\Renderings\Forms\UploadFiles.js" />
     <Content Include="sitecore\shell\client\YourApps\XCore Tools\Renderings\Forms\UploadFiles.test.js" />
     <Content Include="sitecore\shell\client\YourApps\XCore Tools\Renderings\Forms\UploadFiles.cshtml" />
+    <Content Include="App_Config\Include\XBlog.Search.Lucene.config.bak" />
+    <Content Include="App_Config\Include\XBlog.Search.Solr.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
